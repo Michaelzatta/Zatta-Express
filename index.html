@@ -171,22 +171,32 @@
 
 <section id="order">
     <h2>Pedido Online</h2>
-    <form>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" placeholder="Seu nome" required>
+    <form id="pedidoForm" action="https://formspree.io/f/SEU_ID" method="POST" onsubmit="enviarWhatsApp(event)">
+  <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+  <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+  <input type="text" name="endereco_retirada" id="endereco_retirada" placeholder="Endereço de retirada" required>
+  <input type="text" name="endereco_entrega" id="endereco_entrega" placeholder="Endereço de entrega" required>
+  <textarea name="detalhes_pedido" id="detalhes" placeholder="Detalhes do pedido" rows="4" required></textarea>
+  <button type="submit">Enviar Pedido</button>
+</form>
 
-        <label for="phone">Telefone/WhatsApp:</label>
-        <input type="tel" id="phone" placeholder="(XX) XXXX-XXXX" required>
+<script>
+function enviarWhatsApp(event) {
+  // Evita envio duplicado
+  const form = document.getElementById('pedidoForm');
+  const numero = "55119XXXXXXXX"; // coloque seu número do WhatsApp com DDI +55 e DDD
+  const nome = document.getElementById('nome').value;
+  const retirada = document.getElementById('endereco_retirada').value;
+  const entrega = document.getElementById('endereco_entrega').value;
+  const detalhes = document.getElementById('detalhes').value;
 
-        <label for="address">Endereço de Entrega:</label>
-        <textarea id="address" rows="3" placeholder="Rua, número, bairro, cidade" required></textarea>
-
-        <label for="service">Tipo de Entrega:</label>
-        <select id="service" required>
-            <option value="">Selecione</option>
-            <option value="urgente">Urgente</option>
-            <option value="normal">Normal</option>
-        </select>
+  const mensagem = Pedido:\nNome: ${nome}\nRetirada: ${retirada}\nEntrega: ${entrega}\nDetalhes: ${detalhes};
+  const url = https://wa.me/${numero}?text=${encodeURIComponent(mensagem)};
+  
+  // Abre o WhatsApp em nova aba
+  window.open(url, '_blank');
+}
+</script>
 
         <button type="submit">Enviar Pedido</button>
     </form>
@@ -204,4 +214,5 @@
 </footer>
 
 </body>
+
 </html>
