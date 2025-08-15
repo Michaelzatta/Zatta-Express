@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zatta Express - Entregas Rápidas</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #1c1c1c;
+        color: #f0f0f0;
+    }
+
+    header {
+        background-color: #111;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        color: #fff;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: #ccc;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #fff;
+    }
+
+    section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .services {
+        background-color: #2a2a2a;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.6em;
+    }
+
+    .icon {
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        background-color: #111;
+    }
+
+    .contact p {
+        margin: 10px 0;
+    }
+
+    footer {
+        background-color: #111;
+        color: #777;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 0.9em;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 25px;
+        background-color: #444;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #666;
+    }
+
+    /* Formulário de pedido online */
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    form label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    form input, form select, form textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        background-color: #2a2a2a;
+        color: #fff;
+    }
+
+    form input::placeholder, form textarea::placeholder {
+        color: #bbb;
+    }
+
+    form button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background-color: #444;
+        color: #fff;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    form button:hover {
+        background-color: #666;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 2em;
+        }
+        nav a {
+            display: block;
+            margin: 10px 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Zatta Express <i class="fas fa-motorcycle"></i></h1>
+    <nav>
+        <a href="#services">Serviços</a>
+        <a href="#contact">Contato</a>
+        <a href="#order">Pedido Online</a>
+    </nav>
+</header>
+
+<section id="services" class="services">
+    <div class="icon"><i class="fas fa-bolt"></i></div>
+    <h2>Entregas Rápidas</h2>
+    <p>Oferecemos entregas rápidas e seguras em toda a cidade. Nosso compromisso é garantir que seus documentos e pacotes cheguem no destino com agilidade e segurança.</p>
+    <a href="#contact" class="btn">Entre em Contato</a>
+</section>
+
+<section id="order">
+    <h2>Pedido Online</h2>
+    <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" placeholder="Seu nome" required>
+
+        <label for="phone">Telefone/WhatsApp:</label>
+        <input type="tel" id="phone" placeholder="(XX) XXXX-XXXX" required>
+
+        <label for="address">Endereço de Entrega:</label>
+        <textarea id="address" rows="3" placeholder="Rua, número, bairro, cidade" required></textarea>
+
+        <label for="service">Tipo de Entrega:</label>
+        <select id="service" required>
+            <option value="">Selecione</option>
+            <option value="urgente">Urgente</option>
+            <option value="normal">Normal</option>
+        </select>
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contato</h2>
+    <p><i class="fas fa-phone"></i> +55 51 8110-7414 / +55 51 3276-3762</p>
+    <p><i class="fas fa-envelope"></i> zattaexpress.contato@gmail.com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Avenida Niterói 503/302</p>
+</section>
+
+<footer>
+    &copy; 2025 Zatta Express. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
