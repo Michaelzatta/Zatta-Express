@@ -178,28 +178,124 @@
   <input type="text" name="endereco_entrega" id="endereco_entrega" placeholder="Endereço de entrega" required>
   <textarea name="detalhes_pedido" id="detalhes" placeholder="Detalhes do pedido" rows="4" required></textarea>
  <button type="submit">Enviar Pedido</button>
-</form>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zatta Express - Pedidos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    input, textarea, button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #eee;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
 
+  <header>Zatta Express - Pedidos Online</header>
+
+  <main>
+    <h2>Faça seu pedido agora</h2>
+
+    <form id="pedidoForm" action="https://formspree.io/f/SEU_HASHID" method="POST">
+      <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+      <input type="text" name="endereco_retirada" id="endereco_retirada" placeholder="Endereço de retirada" required>
+      <input type="text" name="endereco_entrega" id="endereco_entrega" placeholder="Endereço de entrega" required>
+      <textarea name="detalhes_pedido" id="detalhes" placeholder="Detalhes do pedido" rows="4" required></textarea>
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </main>
+
+  <footer>
+    © 2025 Zatta Express - Entregas rápidas
+  </footer>
+
+  <script>
+    document.getElementById("pedidoForm").addEventListener("submit", function() {
+      // Pega os dados do formulário
+      const nome = document.getElementById('nome').value;
+      const retirada = document.getElementById('endereco_retirada').value;
+      const entrega = document.getElementById('endereco_entrega').value;
+      const detalhes = document.getElementById('detalhes').value;
+
+      // Seu número do WhatsApp
+      const numero = "5551999999999"; // troque pelo seu número: 55 + DDD + número
+      const mensagem = 🚀 Novo Pedido Zatta Express:\n\n👤 Nome: ${nome}\n📍 Retirada: ${retirada}\n📦 Entrega: ${entrega}\n📝 Detalhes: ${detalhes};
+
+      // Abre o WhatsApp em nova aba
+      const url = https://wa.me/${numero}?text=${encodeURIComponent(mensagem)};
+      window.open(url, '_blank');
+    });
+  </script>
 <script>
-function enviarWhatsApp(event) {5551981107414
-  // Evita envio duplicado
-  const form = document.getElementById('pedidoForm');
-  const numero = "5551981107414"; // coloque seu número do WhatsApp com DDI +55 e DDD
+document.getElementById("pedidoForm").addEventListener("submit", function() {
   const nome = document.getElementById('nome').value;
   const retirada = document.getElementById('endereco_retirada').value;
   const entrega = document.getElementById('endereco_entrega').value;
   const detalhes = document.getElementById('detalhes').value;
 
-  const mensagem = Pedido:\nNome: ${nome}\nRetirada: ${retirada,ponto de referência}\nEntrega: ${entrega,ponto de referência}\nDetalhes: ${detalhes};
-  const url = https://wa.me/${numero}?text=${encodeURIComponent(mensagem)};
-  
-  // Abre o WhatsApp em nova aba
-  window.open(url, '_blank');
-}
-</script>
+  const numero = "5551999999999"; // coloque seu número aqui
+  const mensagem = 🚀 Novo Pedido Zatta Express:\n\n👤 Nome: ${nome}\n📍 Retirada: ${retirada}\n📦 Entrega: ${entrega}\n📝 Detalhes: ${detalhes};
 
-        <button type="submit">Enviar Pedido</button>
-    </form>
+  const url = https://wa.me/${numero}?text=${encodeURIComponent(mensagem)};
+  window.open(url, '_blank');
+});
+</script>
+</body>
+</html>
 </section>
 
 <section id="contact" class="contact">
@@ -216,6 +312,7 @@ function enviarWhatsApp(event) {5551981107414
 </body>
 
 </html>
+
 
 
 
