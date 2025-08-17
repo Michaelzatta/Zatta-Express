@@ -177,20 +177,20 @@
   <input type="text" name="endereco_retirada" id="endereco_retirada" placeholder="Endereço de retirada" required>
   <input type="text" name="endereco_entrega" id="endereco_entrega" placeholder="Endereço de entrega" required>
   <textarea name="detalhes_pedido" id="detalhes" placeholder="Detalhes do pedido" rows="4" required></textarea>
-  <button type="submit">Enviar Pedido</button>
+
 </form>
 
 <script>
 function enviarWhatsApp(event) {
   // Evita envio duplicado
   const form = document.getElementById('pedidoForm');
-  const numero = "55119XXXXXXXX"; // coloque seu número do WhatsApp com DDI +55 e DDD
+  const numero = "5551981107414"; // coloque seu número do WhatsApp com DDI +55 e DDD
   const nome = document.getElementById('nome').value;
   const retirada = document.getElementById('endereco_retirada').value;
   const entrega = document.getElementById('endereco_entrega').value;
   const detalhes = document.getElementById('detalhes').value;
 
-  const mensagem = Pedido:\nNome: ${nome}\nRetirada: ${retirada}\nEntrega: ${entrega}\nDetalhes: ${detalhes};
+  const mensagem = Pedido:\nNome: ${nome}\nRetirada: ${retirada,ponto de referência}\nEntrega: ${entrega,ponto de referência}\nDetalhes: ${detalhes};
   const url = https://wa.me/${numero}?text=${encodeURIComponent(mensagem)};
   
   // Abre o WhatsApp em nova aba
@@ -216,4 +216,5 @@ function enviarWhatsApp(event) {
 </body>
 
 </html>
+
 
