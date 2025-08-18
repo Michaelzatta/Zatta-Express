@@ -198,7 +198,6 @@ content="width=device-width, initial-scale=1.0">
     </footer>
     
     <script>
-        
 document.getElementById("pedidoForm").addEventListener("submit", function(e){
   e.preventDefault();
 
@@ -208,21 +207,19 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
   let entrega = document.getElementById("entrega").value;
   let tipo = document.getElementById("tipo").value;
 
-  // Número fixo da Zatta Express
-  let numero = "5551981107414"; 
+  let numero = "555181107414"; // <-- seu número no formato correto
 
-  let mensagem = `*Novo Pedido Zatta Express*%0A
-  👤 Nome: ${nome}%0A
-  📱 Telefone para contato: ${telefone}%0A
-  🏍 Retirada: ${retirada}%0A
-  🎯 Entrega: ${entrega}%0A
-  ⚡ Tipo de Entrega: ${tipo}`;
+  let mensagem = "Novo Pedido Zatta Express%0A" +
+    "👤 Nome: " + nome + "%0A" +
+    "📱 Telefone: " + telefone + "%0A" +
+    "🏍 Retirada: " + retirada + "%0A" +
+    "🎯 Entrega: " + entrega + "%0A" +
+    "⚡ Tipo: " + tipo;
 
-  let url = https://wa.me/${numero}?text=${mensagem};
-  window.open(url, "_blank");
+  let url = "https://wa.me/" + numero + "?text=" + mensagem;
+
+  window.location.href = url; // abre direto no WhatsApp
 });
 </script>
-
-</body>
-</html>
-
+    
+    
