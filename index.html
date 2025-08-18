@@ -171,13 +171,56 @@ content="width=device-width, initial-scale=1.0">
 
 Section id="order">
     <h2>Pedido Online</h2>
-    <form id="pedidoForm" action=https://formspree.io/f/manbkpzj  method="POST" onsubmit="enviarWhatsApp(event)">
-  <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
-  <input type="Telefone para contato" name="Telefone para contato" id="Telefone para contato" placeholder="Telefone para contato" required>
-  <input type="text" name="endereco_retirada , ponto_de_refência " id="endereco_retirada, ponto_de_referência" placeholder="Endereço de retirada , ponto de referência " required>
-  <input type="text" name="endereco_entrega" id="endereco_entrega" placeholder="Endereço de entrega" required>
-  <textarea name="detalhes_pedido" id="detalhes" placeholder="Detalhes do pedido" rows="4" required></textarea>
- <button type="submit">Enviar Pedido</button>
+   <section id="pedido">
+   <h2>📦 Faça seu pedido</h2>
+
+   <form id="pedidoForm">
+      <label>Nome:</label>
+      <input type="text" id="nome" required>
+
+      <label>Telefone do Cliente:</label>
+      <input type="tel" id="telefone" required>
+
+      <label>Endereço de Retirada:</label>
+      <textarea id="retirada" required></textarea>
+
+      <label>Endereço de Entrega:</label>
+      <textarea id="entrega" required></textarea>
+
+      <label>Tipo de Entrega:</label>
+      <select id="tipo" required>
+         <option value="Normal">Normal</option>
+         <option value="Urgente">Urgente</option>
+      </select>
+
+      <button type="submit">Enviar para WhatsApp</button>
+   </form>
+</section>
+
+<script>
+document.getElementById("pedidoForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let nome = document.getElementById("nome").value;
+  let telefone = document.getElementById("telefone").value;
+  let retirada = document.getElementById("retirada").value;
+  let entrega = document.getElementById("entrega").value;
+  let tipo = document.getElementById("tipo").value;
+
+  // Número fixo da Zatta Express
+  let numero = "555181107414"; 
+
+  let mensagem = `*Novo Pedido Zatta Express*%0A
+  👤 Nome: ${nome}%0A
+  📱 Telefone do Cliente: ${telefone}%0A
+  🏍 Retirada: ${retirada}%0A
+  🎯 Entrega: ${entrega}%0A
+  ⚡ Tipo de Entrega: ${tipo}`;
+
+  let url = https://wa.me/${numero}?text=${mensagem};
+  window.open(url, "_blank");
+});
+</script>
   
 </section>
 
@@ -194,6 +237,7 @@ Section id="order">
         
 </body>
 </html>
+
 
 
 
