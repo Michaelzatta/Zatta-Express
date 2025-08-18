@@ -154,12 +154,8 @@ content="width=device-width, initial-scale=1.0">
 <body>
 
 <header>
-    <h1>Zatta Express <i class="fas fa-motorcycle"></i></h1>
-    <nav>
-        <a href="#services">Serviços</a>
-        <a href="#contact">Contato</a>
-        <a href="#order">Pedido Online</a>
-    </nav>
+    <h1>Zatta Express</h1>
+    <p>Entregas rápidas e seguras</p>
 </header>
 
 <section id="services" class="services">
@@ -169,11 +165,13 @@ content="width=device-width, initial-scale=1.0">
     <a href="#contact" class="btn">Entre em Contato</a>
 </section>
 
-Section id="order">
-
+<Section id="order"
+<h2>Faça seu pedido</Section>h2>
+    
    <form id="pedidoForm">
       <label>Nome:</label>
       <input type="text" id="nome" required>
+       
       <label>Telefone para contato:</label>
       <input type="tel" id="telefone" required>
 
@@ -191,8 +189,16 @@ Section id="order">
 
       <button type="submit">Enviar para WhatsApp</button>
    </form>
-
-<script>
+</section>
+    
+    <footer>
+    <p> Avenida Niterói 503/302 - Porto Alegre</p>
+    <p>+55 51 8110-7414 / +55 51 3276-3762</p>
+    <p> zattaexpress.contato@gmail.com</p>
+    </footer>
+    
+    <script>
+        
 document.getElementById("pedidoForm").addEventListener("submit", function(e){
   e.preventDefault();
 
@@ -216,9 +222,7 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
   window.open(url, "_blank");
 });
 </script>
-  
-    <h2>Contato</h2>
-    <p><i class="fas fa-phone"></i> +55 51 8110-7414 / +55 51 3276-3762</p>
-    <p><i class="fas fa-envelope"></i> zattaexpress.contato@gmail.com</p>
-    <p><i class="fas fa-map-marker-alt"></i> Avenida Niterói 503/302</p>
-    </section>
+
+</body>
+</html>
+
