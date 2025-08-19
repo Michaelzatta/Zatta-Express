@@ -153,18 +153,6 @@ content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<header>
-    <h1>Zatta Express</h1>
-    <p>Entregas rápidas e seguras</p>
-</header>
-
-<section id="services" class="services">
-    <div class="icon"><i class="fas fa-bolt"></i></div>
-    <h2>Entregas Rápidas</h2>
-    <p>Oferecemos entregas rápidas e seguras em toda a cidade. Nosso compromisso é garantir que seus documentos e pacotes cheguem no destino com agilidade e segurança.</p>
-    <a href="#contact" class="btn">Entre em Contato</a>
-</section>
-
 <Section id="order"
 <h2>Faça seu pedido</Section>h2>
     
@@ -185,8 +173,15 @@ content="width=device-width, initial-scale=1.0">
       <select id="tipo" required>
          <option value="Normal">Normal</option>
          <option value="Urgente">Urgente</option>
-      </select>
-
+       
+ <label> forma de pagamento</label>
+          <option value="Débito">Débito</option>
+         <option value="Crédito">Crédito</option>
+          <option value="Dinheiro">Dinheiro</option>
+         <option value="Pix">Pix</option>
+          
+   </select>
+       
       <button type="submit">Enviar para WhatsApp</button>
    </form>
 </section>
@@ -224,4 +219,5 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
     
 </body>
     
+
 
