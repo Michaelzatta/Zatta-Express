@@ -200,7 +200,7 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
   let telefone = document.getElementById("telefone").value;
   let retirada = document.getElementById("retirada").value;
   let entrega = document.getElementById("entrega").value;
-  let tipo = document.getElementById("tipo").value;
+  let pagamento = document.getElementById("pagamento").value;
 
   let numero = "555181107414"; // <-- seu número no formato correto
 
@@ -209,7 +209,7 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
     "📱 Telefone: " + telefone + "%0A" +
     "🏍 Retirada: " + retirada + "%0A" +
     "🎯 Entrega: " + entrega + "%0A" +
-    "⚡ Tipo: " + tipo;
+    "⚡ Pagamento: " + pagamento;
 
   let url = "https://wa.me/" + numero + "?text=" + mensagem;
 
@@ -219,5 +219,6 @@ document.getElementById("pedidoForm").addEventListener("submit", function(e){
     
 </body>
     
+
 
 
